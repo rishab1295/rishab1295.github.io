@@ -1,0 +1,875 @@
+/* =========================================================
+   RISHAB BATRA — Academic Portfolio
+   Blue / Clean / Professional
+   ========================================================= */
+
+:root {
+    --blue: #1357a6;
+    --blue-dark: #0b3975;
+    --blue-light: #eaf3ff;
+    --ink: #132238;
+    --muted: #617086;
+    --line: #dbe4ef;
+    --bg: #ffffff;
+    --bg-soft: #f6f9fc;
+    --white: #ffffff;
+    --shadow: 0 20px 55px rgba(18, 48, 82, 0.10);
+    --radius: 18px;
+    --max-width: 1180px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(var(--max-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.narrow {
+    max-width: 1000px;
+}
+
+.section {
+    padding: 105px 0;
+}
+
+.section-alt {
+    background: var(--bg-soft);
+}
+
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(219, 228, 239, 0.8);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--ink);
+}
+
+.brand span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #43536a;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--blue);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--ink);
+    transition: 0.2s ease;
+}
+
+/* Hero */
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    padding: 80px 0 90px;
+    background:
+        radial-gradient(circle at 85% 25%, rgba(19, 87, 166, 0.10), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(58px, 7vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero-title {
+    max-width: 690px;
+    color: #33465e;
+    font-size: 19px;
+    line-height: 1.55;
+    font-weight: 600;
+}
+
+.hero-tagline {
+    margin-top: 17px;
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.hero-description {
+    max-width: 650px;
+    color: var(--muted);
+    margin-top: 13px;
+    font-size: 16px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 31px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: var(--white);
+    background: var(--blue);
+    box-shadow: 0 10px 25px rgba(19, 87, 166, 0.22);
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+}
+
+.btn-outline {
+    color: var(--blue);
+    background: var(--white);
+    border: 1px solid #bfd1e7;
+}
+
+.btn-outline:hover {
+    border-color: var(--blue);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #607089;
+    border-bottom: 1px solid #bfcbd9;
+    padding-bottom: 2px;
+}
+
+.social-links a:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.hero-photo-wrap {
+    justify-self: end;
+    width: min(440px, 100%);
+    position: relative;
+}
+
+.photo-frame {
+    padding: 10px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    border-radius: 22px;
+}
+
+.photo-frame img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 27%;
+    border-radius: 15px;
+}
+
+.photo-note {
+    position: absolute;
+    left: -25px;
+    bottom: 28px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 13px 17px;
+    box-shadow: 0 14px 35px rgba(18, 48, 82, 0.12);
+}
+
+.photo-note strong,
+.photo-note span {
+    display: block;
+}
+
+.photo-note strong {
+    font-size: 12px;
+}
+
+.photo-note span {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* Section headings */
+.section-heading {
+    margin-bottom: 48px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(38px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+/* About */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 80px;
+}
+
+.about-main p {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 19px;
+}
+
+.about-main .lead {
+    color: #354961;
+    font-size: 20px;
+    line-height: 1.65;
+}
+
+.about-main strong {
+    color: var(--ink);
+}
+
+.quick-facts {
+    border-left: 1px solid var(--line);
+    padding-left: 32px;
+}
+
+.fact {
+    padding: 0 0 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.fact:last-child {
+    margin-bottom: 0;
+}
+
+.fact span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.fact strong {
+    font-size: 14px;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 850px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 8px;
+    width: 1px;
+    background: var(--line);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 28px;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 4px solid var(--blue);
+    z-index: 1;
+}
+
+.timeline-card {
+    padding: 26px 30px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.timeline-date {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.timeline-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+    margin: 7px 0 2px;
+}
+
+.institution {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.timeline-card p:last-child,
+.experience-card p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Experience */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.experience-card {
+    padding: 34px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.card-icon {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.card-label {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+.experience-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    margin: 5px 0 1px;
+}
+
+/* Research */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.research-card {
+    min-height: 205px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+    border-color: #aac4e3;
+}
+
+.research-number {
+    color: #8ba4c1;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.research-card h3 {
+    font-size: 20px;
+    margin: 22px 0 8px;
+}
+
+.research-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Skills */
+.skills-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.skill-group {
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.skill-group h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 17px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    padding: 7px 11px;
+    border-radius: 6px;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Publications */
+.publication-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+    padding: 36px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: 0 12px 35px rgba(18, 48, 82, 0.05);
+}
+
+.publication-year {
+    color: var(--blue);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.publication-type {
+    color: var(--blue);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+}
+
+.publication-content h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(23px, 3vw, 32px);
+    line-height: 1.3;
+    margin: 10px 0 12px;
+    max-width: 900px;
+}
+
+.publication-meta {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.publication-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 21px;
+}
+
+.text-link {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.text-link:hover {
+    color: var(--blue-dark);
+}
+
+.text-link span {
+    margin-left: 4px;
+}
+
+/* Contact */
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 70px;
+    padding: 50px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.contact-box h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(42px, 5vw, 60px);
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.contact-box p:not(.eyebrow) {
+    max-width: 600px;
+    color: var(--muted);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+}
+
+.contact-details a {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    padding-top: 42px;
+}
+
+.profile-links a {
+    font-size: 13px;
+    font-weight: 700;
+    color: #5e6f84;
+}
+
+.profile-links a:hover {
+    color: var(--blue);
+}
+
+/* Footer */
+.footer {
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+    background: var(--white);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer p,
+.footer a {
+    color: #7a8798;
+    font-size: 11px;
+}
+
+.footer a:hover {
+    color: var(--blue);
+}
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .nav-links {
+        gap: 17px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .hero-photo-wrap {
+        justify-self: start;
+        width: min(430px, 100%);
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .quick-facts {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding: 28px 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .fact {
+        margin: 0;
+    }
+
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: min(var(--max-width), calc(100% - 32px));
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 17px 20px 23px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 15px 30px rgba(18, 48, 82, 0.08);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(52px, 17vw, 76px);
+        letter-spacing: -2px;
+    }
+
+    .hero-title {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .photo-note {
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .research-grid,
+    .experience-grid,
+    .skills-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .publication-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 27px;
+    }
+
+    .publication-year {
+        font-size: 27px;
+    }
+
+    .contact-box {
+        padding: 30px 25px;
+    }
+
+    .profile-links {
+        gap: 15px 25px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
